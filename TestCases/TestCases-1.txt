@@ -1,0 +1,138 @@
+============================================================
+http://127.0.0.1:8080/v1/insert
+===================================BODY-1====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Mobile"
+    },
+    {
+      "key": "country",
+      "val": "UK"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 90
+    },
+    {
+      "key": "TimeSpent",
+      "val": 110
+    }
+  ]
+}
+===================================BODY-2====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Web"
+    },
+    {
+      "key": "country",
+      "val": "AUS"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 30
+    },
+    {
+      "key": "TimeSpent",
+      "val": 20
+    }
+  ]
+}
+===================================BODY-3====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Tablet"
+    },
+    {
+      "key": "country",
+      "val": "UK"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 30
+    },
+    {
+      "key": "TimeSpent",
+      "val": 60
+    }
+  ]
+}
+===================================BODY-4====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Mobile"
+    },
+    {
+      "key": "country",
+      "val": "UK"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 10
+    },
+    {
+      "key": "TimeSpent",
+      "val": 90
+    }
+  ]
+}
+
+===========================================================
+http://127.0.0.1:8080/v1/query
+===================================BODY-1====================
+
+{
+  "dim": [
+    {
+      "key": "country",
+      "val": "UK"
+    }
+  ]
+}
+
+=================Expected Response=================
+{
+  "dim": [
+    {
+      "key": "country",
+      "val": "UK"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 130
+    },
+    {
+      "key": "TimeSpent",
+      "val": 260
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+

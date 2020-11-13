@@ -1,0 +1,187 @@
+Edit priority.json and add dimention name and its priority
+============================================================
+http://127.0.0.1:8080/v1/insert
+===================================BODY-1====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Mobile"
+    },
+    {
+      "key": "country",
+      "val": "IN"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 70
+    },
+    {
+      "key": "TimeSpent",
+      "val": 30
+    }
+  ]
+}
+===================================BODY-2====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Web"
+    },
+    {
+      "key": "country",
+      "val": "IN"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 50
+    },
+    {
+      "key": "TimeSpent",
+      "val": 50
+    }
+  ]
+}
+===================================BODY-3====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Tablet"
+    },
+    {
+      "key": "country",
+      "val": "US"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 30
+    },
+    {
+      "key": "TimeSpent",
+      "val": 50
+    }
+  ]
+}
+===================================BODY-4====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Mobile"
+    },
+    {
+      "key": "country",
+      "val": "US"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 80
+    },
+    {
+      "key": "TimeSpent",
+      "val": 70
+    }
+  ]
+}
+===================================BODY-5====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Web"
+    },
+    {
+      "key": "country",
+      "val": "US"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 110
+    },
+    {
+      "key": "TimeSpent",
+      "val": 60
+    }
+  ]
+}
+===================================BODY-6====================
+{
+  "dim": [
+    {
+      "key": "device",
+      "val": "Web"
+    },
+    {
+      "key": "country",
+      "val": "US"
+    },
+    {
+          "key": "os",
+          "val": "Android"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 360
+    },
+    {
+      "key": "TimeSpent",
+      "val": 90
+    }
+  ]
+}
+
+
+
+===========================================================
+http://127.0.0.1:8080/v1/query
+===================================BODY-1====================
+
+{
+  "dim": [
+    {
+      "key": "country",
+      "val": "US"
+    }
+  ]
+}
+
+=================Expected Response=================
+{
+  "dim": [
+    {
+      "key": "country",
+      "val": "US"
+    }
+  ],
+  "metrics": [
+    {
+      "key": "WebRequests",
+      "val": 580
+    },
+    {
+      "key": "TimeSpent",
+      "val": 270
+    }
+  ]
+}
+
+
+
+
+
+
+
